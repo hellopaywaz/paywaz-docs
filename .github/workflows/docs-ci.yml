@@ -1,6 +1,19 @@
-name: Docs CI
-on: [push, pull_request]
+name: Build Docs
+
+on:
+  push:
+    branches: [main]
 
 jobs:
-  docs:
-    uses: hellopaywaz/.github/.github/workflows/docs-ci.yml@main
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate API docs
+        run: |
+          npx redoc-cli build openapi/openapi.yaml \
+            --output docs/api/reference.html
+
+      - name: Deploy Docs
+        run: echo "Deploy step here (Pages / Cloudflare / etc)"
