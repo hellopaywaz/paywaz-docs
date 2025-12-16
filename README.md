@@ -1,46 +1,63 @@
 # Paywaz Documentation Hub (Public Preview)
 
-Welcome to the **Paywaz Documentation Hub**, the central resource for technical,
-merchant, and architectural documentation related to the Paywaz ecosystem.
+Welcome to the **Paywaz Documentation Hub**, the central resource for technical, merchant, and architectural documentation related to the Paywaz ecosystem.
 
 > **Important:**  
 > Paywaz is currently operating in **semi-stealth mode**.  
-> All documentation in this repository is a **public preview** intended for
-> early integrators, partners, and candidates.  
-> Certain systems, flows, and endpoints are intentionally generalized or
-> placeholder-only until public API access is released.
+> All documentation in this repository is a **public preview** intended for early integrators, partners, and candidates.  
+> Certain systems, flows, and endpoints are intentionally generalized or placeholder-only until public API access is released.
+
+---
+
+## Start Here: API → SDK → Samples
+
+This repo is the **single landing hub** for Paywaz developer surface area:
+
+1) **API (OpenAPI)**
+- OpenAPI spec repo: https://github.com/hellopaywaz/paywaz-public-api  
+- Hosted API docs (embedded): https://hellopaywaz.github.io/paywaz-docs/
+
+2) **SDK (JavaScript)**
+- SDK repo: https://github.com/hellopaywaz/paywaz-sdk-js  
+- SDK TypeDoc (GitHub Pages): https://hellopaywaz.github.io/paywaz-sdk-js/
+
+3) **Samples**
+- Samples repo: https://github.com/hellopaywaz/paywaz-samples
+
+**Recommended flow**
+- Read the **API reference** → check **SDK TypeDoc** for types/helpers → run **Samples** locally (Node 20).
 
 ---
 
 ## What Is Paywaz?
 
-Paywaz is a zero-fee, crypto-native global payments platform built on
-next-generation Web3 rails, featuring:
+Paywaz is a zero-fee, crypto-native global payments platform built on next-generation Web3 rails, featuring:
 
 - **Zero-Fee Payment Processing**
 - **High-Speed On-Chain Settlement (Solana Mainnet)**
 - **Multi-Chain Support & Stablecoin Payments**
-- **Non-Custodial Security**
+- **Non-Custodial Blockchain Security** — ensuring bank-grade security, safeguarding transactions and building trust within your ecosystem
 - **Hedged Stablecoins (PZUSD, PZGBP, PZEUR, etc.)**
 - **Merchant, Enterprise, and Workforce Solutions**
 
-This repository documents the structure, concepts, flows, and tools developers
-will use to integrate Paywaz as we progress toward public launch.
+This repository documents the structure, concepts, flows, and tools developers will use to integrate Paywaz as we progress toward public launch.
 
 ---
 
 ## Repository Structure
+
+```text
 paywaz-docs/
 │
 ├── getting-started/
-│ └── overview.md # What Paywaz is, how it works, and key concepts
+│   └── overview.md            # What Paywaz is, how it works, and key concepts
 │
 ├── guides/
-│ ├── merchants.md # Merchant onboarding, payments, and settlement
-│ └── developers.md # Developer workflows, integrations, best practices
+│   ├── merchants.md           # Merchant onboarding, payments, and settlement
+│   └── developers.md          # Developer workflows, integrations, best practices
 │
 └── architecture/
-└── system-overview.md # High-level description of Paywaz architecture
+    └── system-overview.md     # High-level description of Paywaz architecture
 
 Additional documentation — including API references, SDK guides, checkout flows,
 webhooks, and treasury mechanics — will be added as public endpoints and tools
