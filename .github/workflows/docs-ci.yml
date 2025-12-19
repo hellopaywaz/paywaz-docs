@@ -4,16 +4,24 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Generate API docs
-        run: |
-          npx redoc-cli build openapi/openapi.yaml \
-            --output docs/api/reference.html
-
-      - name: Deploy Docs
-        run: echo "Deploy step here (Pages / Cloudflare / etc)"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build static docs
+        run: npm run build
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: paywaz-docs-dist
+          path: dist

@@ -1,0 +1,22 @@
+{
+  "name": "paywaz-docs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static documentation hub for Paywaz API, SDK, and integration resources.",
+  "license": "SEE LICENSE IN paywaz-license",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "node scripts/lint.js",
+    "format": "node scripts/lint.js --fix",
+    "typecheck": "node -e \"console.log('No TypeScript sources to type-check yet.')\"",
+    "test": "node scripts/smoke.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && node scripts/build.js",
+    "dev": "node scripts/serve.js docs 4173",
+    "start": "node scripts/serve.js docs 4173",
+    "preview": "node scripts/serve.js dist 4174"
+  },
+  "packageManager": "npm@10.9.2"
+}

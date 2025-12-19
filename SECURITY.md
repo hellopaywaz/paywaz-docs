@@ -1,6 +1,6 @@
 # Security Policy
 
-Security is a top priority at Paywaz.  
+Security is a top priority at Paywaz.
 If you believe you’ve discovered a vulnerability that could affect Paywaz systems, SDKs, APIs, or documentation, please follow this policy.
 
 ---
@@ -9,12 +9,12 @@ If you believe you’ve discovered a vulnerability that could affect Paywaz syst
 
 This security policy applies to:
 
-- `paywaz-public-api`  
-- `paywaz-sdk-js`  
-- `paywaz-docs`  
-- `paywaz-samples`  
-- `paywaz-license`  
-- Any official Paywaz open-source project or SDK  
+- `paywaz-public-api`
+- `paywaz-sdk-js`
+- `paywaz-docs`
+- `paywaz-samples`
+- `paywaz-license`
+- Any official Paywaz open-source project or SDK
 
 ---
 
@@ -27,11 +27,11 @@ Please email:
 **security@paywaz.com**
 
 Include:
-- Description of the issue  
-- Affected repo(s)  
-- Proof-of-concept if available  
-- Steps to reproduce  
-- Recommended mitigations (optional)  
+- Description of the issue
+- Affected repo(s)
+- Proof-of-concept if available
+- Steps to reproduce
+- Recommended mitigations (optional)
 
 We aim to acknowledge vulnerability reports within **48 hours**, and provide a remediation plan within **5 working days**.
 
@@ -40,9 +40,9 @@ We aim to acknowledge vulnerability reports within **48 hours**, and provide a r
 ## Responsible Disclosure
 
 We request:
-- No public disclosure until our fix is released  
-- No exploitation of the vulnerability  
-- No disruption to Paywaz services or network  
+- No public disclosure until our fix is released
+- No exploitation of the vulnerability
+- No disruption to Paywaz services or network
 
 We appreciate responsible researchers and will credit them (optional) after resolution.
 
@@ -51,10 +51,10 @@ We appreciate responsible researchers and will credit them (optional) after reso
 ## Security Updates
 
 Maintainers will:
-- Prioritize critical vulnerabilities  
-- Patch supported versions  
-- Publish release notes for security fixes  
-- Update documentation as needed  
+- Prioritize critical vulnerabilities
+- Patch supported versions
+- Publish release notes for security fixes
+- Update documentation as needed
 
 ---
 
