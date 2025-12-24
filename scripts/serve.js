@@ -25,8 +25,15 @@ const mimeTypes = {
 
 const server = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url);
-  const safePath = path.normalize(parsedUrl.pathname || '/').replace(/^\.\.(\/|\\)/, '');
-  let pathname = path.join(rootDir, safePath);
+  const safePath = parsedUrl.pathname || '/';
+  // Resolve against rootDir and ensure the final path stays within rootDir
+  let pathname = path.resolve(rootDir, '.' + safePath);
+
+  if (!pathname.startsWith(rootDir + path.sep) && pathname !== rootDir) {
+    res.statusCode = 403;
+    res.end('Forbidden');
+    return;
+  }
 
   if (fs.existsSync(pathname) && fs.statSync(pathname).isDirectory()) {
     pathname = path.join(pathname, 'index.html');
